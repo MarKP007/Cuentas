@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.pichincha.Cuentas.configuration.FeignCuentaConfig;
 import com.pichincha.Cuentas.model.ClienteDTO;
 
-@FeignClient(name = "Cliente", url = "http://cliente-app:8080", configuration = FeignCuentaConfig.class)
+@FeignClient(name = "Cliente", url = "${cuentas_url}", configuration = FeignCuentaConfig.class)
 public interface ToClienteFromCuenta {
 
 	@GetMapping("/clientes/{id}")
